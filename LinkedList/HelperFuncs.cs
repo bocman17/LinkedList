@@ -42,10 +42,9 @@ namespace LinkedList
             {
                 return;
             }
-            if (head.Value != null)
-            {
-                values.Add(head.Value);
-            }
+
+            values.Add(head.Value);
+
             HelperValues(head.Next, values);
         }
     }

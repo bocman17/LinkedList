@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace LinkedList
 {
-    public static class SumValues<T> where T : struct, 
+    public static class SumValues<T> where T : struct,
         IComparable<T>, IEquatable<T>, IFormattable, IConvertible, IComparable
     {
-        public static dynamic ReturnSumValues(Node<T>? head)
+        public static dynamic Iterative(Node<T>? head)
         {
             if (head is null)
             {
@@ -24,14 +24,13 @@ namespace LinkedList
             }
             return sum;
         }
-
-        public static dynamic ReturnSumValuesRecursive(Node<T>? head)
+        public static dynamic Recursive(Node<T>? head)
         {
             if (head is null)
             {
                 return 0;
             }
-            return head.Value + ReturnSumValuesRecursive(head.Next);
+            return head.Value + Recursive(head.Next);
         }
     }
 }

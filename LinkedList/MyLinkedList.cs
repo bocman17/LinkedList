@@ -39,14 +39,16 @@ namespace LinkedList
             var current = Head;
             while (current != null)
             {
-                if (current.Value != null)
-                {
-                    values.Add(current.Value);
-                }
+                values.Add(current.Value);
                 current = current.Next;
             }
             return values;
         }
+
+        //public Node<T> ReverseList()
+        //{
+
+        //}
 
         public void Print()
         {
