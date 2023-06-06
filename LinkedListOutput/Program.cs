@@ -1,10 +1,15 @@
 ﻿using LinkedList;
 
-Console.WriteLine("Hello");
+int[] arr1 = { 0, 1, 2, 3, 5, 6 };
 
-int[] arr = { 1, 2, 3, 4, 5, 6 };
-MyLinkedList<int> list = new MyLinkedList<int>(arr);
-var result1 = GetNodeValue<int>.Iterative(list.Head, 5);
-Console.WriteLine(result1);
-var result2= GetNodeValue<int>.Recursive(list.Head, 6);
-Console.WriteLine(result2);
+MyLinkedList<int> list1 = new MyLinkedList<int>(arr1);
+list1.AddAtIndex(4, 4);
+list1.AddAtIndex(7, 15);
+list1.Print();
+
+var list = list1.ReturnValues();
+
+foreach (var item in list)
+{
+    Console.WriteLine(item);
+}

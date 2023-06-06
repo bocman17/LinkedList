@@ -16,7 +16,7 @@ namespace LinkedList
             }
             var current = head;
             var count = 0;
-            while (count < targetIndex && current != null)
+            while (count < targetIndex && current != null)  
             {
                 count++;
                 current = current.Next;
